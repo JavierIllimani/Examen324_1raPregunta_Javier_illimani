@@ -3,7 +3,7 @@
 $carnet = $_GET['carnet']; /*Se consigue el carnet para poder mostar la imagen en la etiqueta img*/
 $conexion = mysqli_connect("localhost","root","","academico");
 /* En la siguiente codigo, se consula  en la base de datos para poder conseguir de la tabla, 
-   el nombre del usuario que accedio, para posteriormente mostrar en nombre.*/
+   el nombre del usuario que accedio, para posteriormente mostrar el nombre.*/
 $sentencia="SELECT ci,nombreCompleto FROM identificador WHERE ci='$carnet'";
             $resultado=mysqli_query($conexion,$sentencia);
             $filas=mysqli_fetch_assoc($resultado);
